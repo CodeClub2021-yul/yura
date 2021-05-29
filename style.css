@@ -1,0 +1,463 @@
+body {
+	font-family:'Times New Roman', Times, serif;
+	background: url(img/d7.jpg);
+	background-size: 100%;
+	
+}
+a {
+	text-decoration: none;
+	color: blue;
+}
+
+.menu_link {
+	text-decoration: none;
+	color: blue;
+	font-size: 20px;
+	font-family: Impact;
+	padding: none;
+	margin: 5px;
+}
+.person {
+	position: relative;
+	border: 10px dotted blue;
+	background: lightgreen;
+	margin: 3%;
+	border-radius: 5%;
+	padding: 5px;
+}
+.title_h2 {
+	text-align: center;
+	font-size: 60px;
+	animation: infinite 5s txt;
+	margin: 0px auto;
+}
+.title_h3 {
+	font-size: 40px;
+	margin: 0px auto;
+	margin-left: 5px;
+}
+.title_h4 {
+	font-size: 30px;
+	margin: 0px auto;
+	margin-left: 5px;
+}
+.img_p2 {
+	height: 400px;
+	border-radius: 5%;
+	margin: 1%;
+	border: 3px solid black;
+	float: right;
+}
+.main_h2 {
+	font-family: Times New Roman;
+	text-align: center;
+	border: 3px double green;
+	animation: infinite 7s background;
+	padding: 4px;
+	width: 400px;
+	margin-left: auto;
+	margin-right: auto;
+	border-radius: 20px;
+}
+.myCoolText {
+	font-family: Impact;
+	color:white;
+	padding: none;
+	margin: 5px;
+	font-size: 20px;
+}
+.header {
+	margin:1%;
+	height: 230px;
+	width: 20%;
+	border: 10px double red;
+}
+.title {
+	border: dotted blue;
+	background: linear-gradient(red, orange, green, purple);
+	height: 100px;
+	text-align:center;
+	width:300px;
+	color: blue;
+	border-radius: 20px;
+	font-size: 30px;
+	margin-right: auto;
+	margin-left: auto;
+}
+.div1 {
+	display: flex;
+	text-align: center;
+	flex-direction: column;
+	border: 3px solid red;
+	background: orange;
+	border-radius: 10px;
+	width: auto;
+}
+.li {
+	font-size: 20px;
+	text-align: center;
+	padding-bottom: 2px; 
+	border: 1px solid red;
+	border-radius: 10px;
+}
+.text {
+	font-size: 20px;
+	font-family: Ariel;
+	top: 0%;
+}
+.goto_menu {
+	margin-left: 50px;
+	margin-top: 5px;
+	font-size: 20px;
+}
+.main_text {
+	padding: 1%;
+	background: dimgrey;
+	margin-left: 10%;
+	margin-right: 10%;
+	width: 80%;
+	font-size: 23px;
+	font-family: Ariel;
+	color: white;
+	border-radius: 30px;
+	animation: infinite 10s border;
+}
+.card {
+	width: 200px;
+	height: 200px;
+	border: 2px solid #F0FFFF;
+	color: white;
+	box-sizing: border-box;
+	border-radius: 10px;
+	padding: 10px;
+	margin-top: 20px;
+	background: darkblue;
+	margin-left:auto;
+	margin-right:auto;
+}
+.card_link {
+	text-decoration: none;
+}
+.rifles{
+	display: flex;
+	flex-wrap:wrap;
+	justify-content: space-around;
+}
+.group {
+	display: flex;
+	justify-content: space-around;
+	flex-wrap: wrap;
+}
+.title_weapons{
+	text-align: center;
+	color: aquamarine;
+}
+.big_card {
+	border-radius: 20px;
+	padding: 10px;
+	background: darkblue;
+	width: 550px;
+	border: 4px solid #F0FFFF;
+	color: white;
+	margin: 10px;
+}
+.big_card_img {
+	height: 250px;
+	width: 330px;
+	border: 2px solid red;
+	border-radius: 20px;
+	margin-left: 100px;
+	margin-right: 100px;
+}
+.new_h3 {
+	text-align: center;
+	font-size: 40px;
+	margin: 3px;
+}
+.static {
+	text-align: center;
+	list-style-type: none;
+	color: rgb(255, 166, 0);
+}
+#collage {
+	border: 2px solid darkorchid;
+	width: 1000px;
+	height: 600px;
+	margin-left: auto;
+	margin-right: auto;
+	position: relative;
+	background-image: url(img/p2.jpg);
+	background-size: 100%;
+	margin-top: 20px;
+	margin-bottom: 20px;
+}
+#collage_img_1 {
+	position: absolute;
+	left: 40%;
+	width: 150px;
+	top: 10%;
+	border-radius: 35px;
+	border: 7px dotted green;
+	transform: rotate(12deg);
+}
+#collage_img_2 {
+	position: absolute;
+	width: 350px;
+	left: 43%;
+	top: 45%;
+	border-radius: 23px;
+	border: 5px double yellow;
+	transform: rotate(32deg);
+}
+#collage_img_3 {
+	position: absolute;
+	width: 350px;
+	left: 12%;
+	top: 55%;
+	border-radius: 23px;
+	border: 5px double blue;
+	transform: rotate(-15deg);
+}
+#collage_img_4 {
+	position: absolute;
+	width: 350px;
+	left: 64%;
+	top: 6%;
+	border-radius: 23px;
+	border: 3px solid red;
+}
+#collage_img_5 {
+	position: absolute;
+	width: 300px;
+	left: 7%;
+	top: 14%;
+	border-radius: 23px;
+	border: 5px dashed rgb(0, 255, 200);
+	transform: rotate(-5deg);
+}
+#menu{
+	width:30%;
+	border: 3px solid red;
+	background: orange;
+	padding: 10px;
+	border-radius: 10px;
+	margin-left: auto;
+	margin-right: auto;
+	list-style-type: none;
+}
+#head {
+	height: 150px;
+	width: 100%;
+	background-image: url("img/headsmall.jpg");
+	background-size: 100%;
+}
+#animation{
+	height: 190px;
+	float: right;
+	margin-right: 5%;
+	animation: infinite 5s dallas;
+}
+#footer {
+	height:200px;
+	margin-left: 5%;
+	top: 100%;
+}
+#title_img {
+	width: 50%;
+	margin-left: 25%;
+	margin-right: 25%;
+	border: 10px dashed green;
+	border-radius: 100px;
+	margin-bottom: 15px;
+}
+#flex {
+	display: flex;
+	justify-content: space-around;
+}
+
+.weapon_menu{
+	border: 3px solid red;
+	background: orange;
+	border-radius: 10px;
+	width: 300px;
+	padding: 5px;
+	font-size: 20px;
+	text-align: center;
+	height: auto;
+}
+.card_img {
+	height: 60px;
+	border-radius: 10px;
+	margin-left: 30px;
+	margin-right: 20px;
+	border: 1px solid red;
+}
+.title_menu_weapons {
+	text-align: center;
+	font-size: 25px;
+	margin: 5px;
+	border: 2px solid green;
+	border-radius: 5px;
+}
+
+.menu_txt:hover {
+	background: indianred;
+}
+.menu_link:hover {
+	text-decoration: underline;
+	animation: infinite 7s hover;
+}
+.card:hover {
+	border-color: #1E90FF;
+}
+.big_card:hover {
+	border-color: #ffbf00;
+}
+a:hover {
+	text-decoration: underline;
+	color: red;
+}
+
+nav ul li {
+	display: inline;
+}
+nav ul {
+	list-style-type: none;
+	background-color: tomato;
+	border-style: solid;
+	border-color: MediumVioletRed;
+	border-width: 2px;
+	padding: 10px;
+
+}
+nav ul li a {
+	text-decoration: none;
+}
+#block {
+	height: 10%;
+	width: 100%;
+	background: grey;
+}
+.sideNoteStyle {
+	border: 3px double purple;
+	background-color: lightgray;
+	padding: 0.5em;
+	margin: 0.5em;
+	opacity: 0.75;
+	font-size: 20px;
+}
+.specialText {
+	color: #FF4500;
+	font-size: larger;
+}
+.grid {
+	display: grid;
+	grid-column-gap: 0.5em;
+	grid-row-gap: 1em;
+	grid-template-rows: auto;
+	grid-template-columns: 1fr 1fr;
+	grid-template-areas:
+	"agTitle agTitle"
+	"agArticle agArticle"
+	"agAside1 agAside2";
+}
+  .articleGrid {
+	grid-area: agArticle;
+}
+  .asideG1{
+	grid-area: agAside1;
+}
+  .asideG2 {
+	grid-area: agAside2;
+}
+	.title_p3_grid {
+		grid-area: agTitle;
+	}
+	  
+
+@keyframes dallas {
+	0% {transform: rotate(0deg);}
+	100% {transform: rotate(720deg);}
+}
+@keyframes txt{
+	0% {color: red;}
+	10%{color: yellow;}
+	30%{color: green;}
+	50%{color: cyan;}
+	70%{color: blue;}
+	90%{color: purple;}
+	100%{color: red;}
+}
+@keyframes background {
+	0% {background: goldenrod;}
+	30% {background: orange;}
+	60% {background: darkorange;}
+	90% {background: indianred;}
+	100% {background: goldenrod;}
+}
+@keyframes border {
+	0% {border: 3px solid red;}
+	10%{border: 3px solid yellow;}
+	30%{border: 3px solid green;}
+	50%{border: 3px solid cyan;}
+	70%{border: 3px solid blue;}
+	90%{border: 3px solid purple;}
+	100%{border: 3px solid red;}
+}
+@keyframes hover {
+	0% {color: red;}
+	10%{color: yellow;}
+	30%{color: green;}
+	50%{color: cyan;}
+	70%{color: blue;}
+	90%{color: purple;}
+	100%{color: red;}
+}
+
+@media all and (min-width: 700px) {
+	#head {
+		height: 300px;
+	}
+}
+@media all and (min-width: 1000px) {
+	.div1 {
+		flex-direction: row;
+		justify-content: space-around;
+	}
+	.li {
+		border: none;
+		border-radius: none;
+	}
+	#menu {
+		width: 17%;
+	}
+	.menu_link {
+		padding: 9px;
+		background:yellow;
+		border: 1px solid brown;
+		margin: none;
+		font-size: 15px;
+	}
+	.myCoolText {
+		background-color: #003366;
+		border: 1px ridge #ccffff;
+		padding: 9px;
+		margin: none;
+		font-size: 15px;
+	}
+	#head {
+		background-image: url("img/d1.jpg");
+		height: 200px;
+	}
+	.grid {
+		grid-template-columns: 2fr 1fr;
+		grid-template-areas:
+		"agTitle agTitle"
+		"agArticle agAside1"
+		"agArticle agAside2"
+		"agArticle .";
+	}
+}
+
+
+  

@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>PAYDAY 2 сайт: Главная</title>
+	    <link rel="stylesheet" type="text/css" href="style.css">
+	    <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
+	    <script src="js.js"></script>
+	    <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    </head>
+    <body>
+        <header>
+            <div id="head"></div>
+            <nav>
+                <ul class="div1">
+                    <li> <a href="page2.html" class="menu_link"> Главная</a></li>
+                    <li> <a href="page2.html" class="menu_link"> Главные герои </a></li>
+                    <li> <a href="page3.html" class="menu_link"> Виды оружий</a> </li>
+                    <li> <a href="page4.html" class="menu_link"> Виды врагов</a></li>
+                    <li> <a class="myCoolText"> Илюстрации</a></li>
+                 </ul>
+            </nav>
+        </header>
+        <main>
+            <div id="collage">
+                <img id="collage_img_3" src="img/payday2-199-update.jpg" alt="units">
+                <img id="collage_img_4" src="img/s4_main.jpg" alt="units">
+                <img id="collage_img_5" src="img/units/Shields.jpg" alt="units">
+                <img id="collage_img_2" src="img/p4.jpeg" alt="infamy">
+                <img id="collage_img_1" src="img/d6.png" alt="units">
+            </div>
+            <div class="slider">
+                <div class="slider__wrapper">
+                  <div class="slider__item">
+                      <img src="img/slider/slide_1.jpg">
+                  </div>
+                  <div class="slider__item">
+                      <img src="img/slider/slide_2.jpg">
+                  </div>
+                  <div class="slider__item">
+                      <img src="img/slider/slide_3.jpg">
+                  </div>
+                  <div class="slider__item">
+                      <img src="img/slider/slide_4.jpg">
+                  </div>
+                  <div class="slider__item">
+                      <img src="img/slider/slide_5.jpg">
+                  </div>
+                </div>
+                <a class="slider__control slider__control_left" href="#" role="button"></a>
+                <a class="slider__control slider__control_right slider__control_show" href="#" role="button"></a>
+            </div>
+            <style>             
+                    .slider {
+                        position: relative;
+                        overflow: hidden;
+                        margin-left: 300px;
+                    }
+                  
+                    .slider__wrapper {
+                        display: flex;
+                        transition: transform 0.6s ease;
+                    }
+                  
+                    .slider__item {
+                        flex: 0 0 100%;
+                        max-width: 100%;
+                    }
+                  
+                    .slider__control {
+                        position: absolute;
+                        top: 50%;
+                        display: none;
+                        align-items: center;
+                        justify-content: center;
+                        width: 40px;
+                        color: #fff;
+                        text-align: center;
+                        opacity: 0.5;
+                        height: 50px;
+                        transform: translateY(-50%);
+                        background: rgba(0, 0, 0, .5);
+                    }
+                  
+                    .slider__control_show {
+                        display: flex;
+                    }
+                  
+                    .slider__control:hover,
+                    .slider__control:focus {
+                        color: #fff;
+                        text-decoration: none;
+                        outline: 0;
+                        opacity: .9;
+                    }
+                  
+                    .slider__control_left {
+                        left: 0;
+                    }
+                  
+                    .slider__control_right {
+                        right: 17.25%;
+                    }
+                  
+                      .slider__control::before {
+                        content: '';
+                        display: inline-block;
+                        width: 20px;
+                        height: 20px;
+                        background: transparent no-repeat center center;
+                        background-size: 100% 100%;
+                      }
+                  
+                      .slider__control_left::before {
+                        background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%23fff' viewBox='0 0 8 8'%3E%3Cpath d='M5.25 0l-4 4 4 4 1.5-1.5-2.5-2.5 2.5-2.5-1.5-1.5z'/%3E%3C/svg%3E");
+                      }
+                  
+                      .slider__control_right::before {
+                        background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%23fff' viewBox='0 0 8 8'%3E%3Cpath d='M2.75 0l-1.5 1.5 2.5 2.5-2.5 2.5 1.5 1.5 4-4-4-4z'/%3E%3C/svg%3E");
+                      }
+                  
+                      .slider__item>div {
+                        line-height: 250px;
+                        font-size: 100px;
+                        text-align: center;
+                      }
+            </style>
+            <script>
+                'use strict';
+                      var multiItemSlider = (function () {
+                        return function (selector, config) {
+                          var
+                            _mainElement = document.querySelector(selector), // основный элемент блока
+                            _sliderWrapper = _mainElement.querySelector('.slider__wrapper'), // обертка для .slider-item
+                            _sliderItems = _mainElement.querySelectorAll('.slider__item'), // элементы (.slider-item)
+                            _sliderControls = _mainElement.querySelectorAll('.slider__control'), // элементы управления
+                            _sliderControlLeft = _mainElement.querySelector('.slider__control_left'), // кнопка "LEFT"
+                            _sliderControlRight = _mainElement.querySelector('.slider__control_right'), // кнопка "RIGHT"
+                            _wrapperWidth = parseFloat(getComputedStyle(_sliderWrapper).width), // ширина обёртки
+                            _itemWidth = parseFloat(getComputedStyle(_sliderItems[0]).width), // ширина одного элемента    
+                            _positionLeftItem = 0, // позиция левого активного элемента
+                            _transform = 0, // значение транфсофрмации .slider_wrapper
+                            _step = _itemWidth / _wrapperWidth * 100, // величина шага (для трансформации)
+                            _items = []; // массив элементов
+                          // наполнение массива _items
+                          _sliderItems.forEach(function (item, index) {
+                            _items.push({ item: item, position: index, transform: 0 });
+                          });
+                  
+                          var position = {
+                            getMin: 0,
+                            getMax: _items.length - 1,
+                          }
+                  
+                          var _transformItem = function (direction) {
+                            if (direction === 'right') {
+                              if ((_positionLeftItem + _wrapperWidth / _itemWidth - 1) >= position.getMax) {
+                                return;
+                              }
+                              if (!_sliderControlLeft.classList.contains('slider__control_show')) {
+                                _sliderControlLeft.classList.add('slider__control_show');
+                              }
+                              if (_sliderControlRight.classList.contains('slider__control_show') && (_positionLeftItem + _wrapperWidth / _itemWidth) >= position.getMax) {
+                                _sliderControlRight.classList.remove('slider__control_show');
+                              }
+                              _positionLeftItem++;
+                              _transform -= _step;
+                            }
+                            if (direction === 'left') {
+                              if (_positionLeftItem <= position.getMin) {
+                                return;
+                              }
+                              if (!_sliderControlRight.classList.contains('slider__control_show')) {
+                                _sliderControlRight.classList.add('slider__control_show');
+                              }
+                              if (_sliderControlLeft.classList.contains('slider__control_show') && _positionLeftItem - 1 <= position.getMin) {
+                                _sliderControlLeft.classList.remove('slider__control_show');
+                              }
+                              _positionLeftItem--;
+                              _transform += _step;
+                            }
+                            _sliderWrapper.style.transform = 'translateX(' + _transform + '%)';
+                          }
+                  
+                          // обработчик события click для кнопок "назад" и "вперед"
+                          var _controlClick = function (e) {
+                            if (e.target.classList.contains('slider__control')) {
+                              e.preventDefault();
+                              var direction = e.target.classList.contains('slider__control_right') ? 'right' : 'left';
+                              _transformItem(direction);
+                            }
+                          };
+                  
+                          var _setUpListeners = function () {
+                            // добавление к кнопкам "назад" и "вперед" обрботчика _controlClick для событя click
+                            _sliderControls.forEach(function (item) {
+                              item.addEventListener('click', _controlClick);
+                            });
+                          }
+                  
+                          // инициализация
+                          _setUpListeners();
+                  
+                          return {
+                            right: function () { // метод right
+                              _transformItem('right');
+                            },
+                            left: function () { // метод left
+                              _transformItem('left');
+                            }
+                          }
+                  
+                        }
+                      }());
+                  
+                      var slider = multiItemSlider('.slider')
+            </script>
+        </main>
+    </body>
+</html>
